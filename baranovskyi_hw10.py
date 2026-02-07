@@ -11,9 +11,6 @@
 numbers = [4, 9, 1, 7, 2, 5, 0, 3, 7, 1, 3]
 print('Изначальный список:', numbers)
 
-for item in numbers:
-    if item % 2:
-        item *= item
 for i in range(len(numbers)):
     if numbers[i] % 2:
         numbers[i] = numbers[i] ** 2

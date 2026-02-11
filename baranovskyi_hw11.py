@@ -10,7 +10,8 @@
 #
 # for i in range(len(text)):
 #     char = text[i]
-#     if char in use: # можно добавить or char == " " что бы не считать пробелы вокруг in
+#     if char in use:
+# можно добавить or char == " " что бы не считать пробелы вокруг in, но в задание про это ничего не сказанно
 #         continue
 #     use += char
 #     counts = 0

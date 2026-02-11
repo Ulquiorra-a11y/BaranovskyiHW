@@ -25,9 +25,8 @@
 text = "I have 5 apples and 10 oranges, price is 0.5 each. Card number is ....3672.".split()
 
 for i in text:
-    x = i.rstrip('.')
-    if x.replace('.', '', 1).isdigit():
-        i = float(x) * 10
+    if i.replace('.', '', 1).isdigit():
+        i = float(i) * 10
     print(i, end=" ")
 
 

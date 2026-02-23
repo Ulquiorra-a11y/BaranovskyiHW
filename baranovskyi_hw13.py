@@ -2,7 +2,7 @@ numbers = (3, 7, 2, 8, 5, 10, 1)
 res = []
 max_num = None
 for number in numbers:
-    if max_num == None or number > max_num:
+    if max_num is None or number > max_num:
         res.append(number)
         max_num = number
 print("Кортеж по возрастанию:", tuple(res))

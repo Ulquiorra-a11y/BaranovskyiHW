@@ -3,7 +3,7 @@ res = []
 for item in strings:
     for i, char in enumerate(item):
         if char.isdigit():
-            if item[i:].isdigit() and item[:i].isalpha():
+            if item[i:].isdigit():
                 res.append(item)
             break
 print('Строки с цифрами только в конце: ', res)

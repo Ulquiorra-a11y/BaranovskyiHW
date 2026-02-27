@@ -10,5 +10,13 @@ data_list = ["John 23 12345.678", "Alice 30 200.50", "Bob 35 15000.3","Charlie 4
 for x in data_list:
     y,a,b = x.split()
     print(f"Имя: {y:10} | Возраст: {a:>3} | Баланс: {float(b):10.2f}")
-
+# #
+# for x in data_list:
+#     for y in x.split():
+#         if y.isdigit():
+#             print(f'Возраст: {int(y):3}', end=" | ")
+#         elif y.isalpha():
+#             print(f"Имя: {y:10}", end=" | ")
+#         else:
+#             print(f"Баланс: {float(y):10.2f}")
 

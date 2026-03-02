@@ -12,4 +12,5 @@ print(f"{'Товар':10} {'Старая цена':15} {'Новая цена':10
 for item in products:
     name, price = item
     new_price = price-discount*price/100
+    item.append(new_price)
     print(f"{name:10} {price:>10.2f}$ {new_price:>13.2f}$")

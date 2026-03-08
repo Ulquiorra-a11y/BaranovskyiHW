@@ -14,7 +14,6 @@
 
 set1 = {2, 3, 4, 5, 6}
 set2 = {4, 5}
-
 if set2.issubset(set1):
     print("Подмножество:", True)
     print("Разница:", set1 - set2)

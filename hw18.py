@@ -3,10 +3,10 @@
 # for num in numbers:
 #     if numbers.count(num) > 1:
 #         new_numbers.add(num)
-# result = list(new_numbers)
-# print(result)
-# result.sort(reverse=True)
-# print(result)
+#
+# print(new_numbers)
+# print(sorted(new_numbers, reverse=True))
+
 
 dict1 = {"a": 1, "b": 2}
 dict2 = {"a": 1, "b": 2, "c": 3}

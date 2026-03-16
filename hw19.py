@@ -13,22 +13,14 @@
 # print(result)
 
 students = {"Аня": 92, "Боря": 76, "Ваня": 65, "Галя": 48, "Дима": 88, "Ева": 54}
-groups = ["Отличники", "Хорошисты", "Троечники", "Не сдали"]
-res = {}
 
-for group in groups:
-    res[group] = {}
-
-    for name, score in students.items():
-        if score >= 85 and group == "Отличники":
-            res[group][name] = score
-        elif 70 <= score <= 85 and group == "Хорошисты":
-            res[group][name] = score
-        elif 69 >= score >= 50 and group == "Троечники":
-            res[group][name] = score
-        elif 50 > score and group == "Не сдали":
-            res[group][name] = score
-print(res)
+result = {
+    "Отличники": {k: v for k, v in students.items() if v >= 85},
+    "Хорошисты": {k: v for k, v in students.items() if 70 <= v <= 84},
+    "Троечники": {k: v for k, v in students.items() if 50 <= v <= 69},
+    "Не сдали": {k: v for k, v in students.items() if v < 50}
+}
+print(result)
 
 
 

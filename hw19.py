@@ -27,7 +27,6 @@ for name, score in students.items():
     else:
         result["Не сдали"][name] = score
 
-print("Распределение по группам:\n")
 print(result)
 
 

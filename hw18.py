@@ -11,10 +11,7 @@
 dict1 = {"a": 1, "b": 2}
 dict2 = {"a": 1, "b": 2, "c": 3}
 
-res = True
-for key in dict1:
-    if dict1[key] != dict2[key]:
-        res = False
-        break
-if res:
+if dict1.items() <= dict2.items():
     print("Первый словарь является подмножеством второго")
+else:
+    print("Первый словарь не является подмножеством второго")

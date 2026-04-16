@@ -13,9 +13,6 @@ import os
 
 
 
-import sys
-import os
-
 if len(sys.argv) != 3:
     print("Использование: python script.py <путь> <расширение>")
     exit()

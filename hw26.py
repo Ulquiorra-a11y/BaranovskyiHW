@@ -12,7 +12,6 @@ import os
 #         print("Файл:", item)
 
 
-
 if len(sys.argv) != 3:
     print("Использование: python script.py <путь> <расширение>")
     exit()

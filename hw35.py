@@ -4,7 +4,7 @@ class User:
         if not isinstance(login, str) or not login.strip():
             raise ValueError("Login must not be empty")
         if not isinstance(password, str) or len(password) < 5:
-            raise ValueError("Password must not be empty and contain at least 5 characters")
+            raise ValueError(f"Invalid password: {password}")
         self.login = login
         self.password = password
         User.total_users += 1

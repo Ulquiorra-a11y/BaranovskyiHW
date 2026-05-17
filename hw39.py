@@ -1,11 +1,13 @@
 from math import pi
+from abc import ABC, abstractmethod
 
 
 class InvalidSizeError(ValueError):
     pass
 
-class Shape:
-    def area(self) -> float:
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
         pass
 
 class Rectangle(Shape):

@@ -6,18 +6,18 @@ class BankAccount:
 
     def deposit(self, amount):
         if amount <= 0:
-            print("Error: Amount must be positive.")
-            return
+            raise ValueError("Amount must be positive.")
+
         self.__balance += amount
         self.__history.append(f"Deposit: {amount}")
 
     def withdraw(self, amount):
         if amount <= 0:
-            print("Error: Amount must be positive.")
-            return
+            raise ValueError("Amount must be positive.")
+
         if amount > self.__balance:
-            print("Error: Not enough funds.")
-            return
+            raise ValueError("Not enough funds.")
+
         self.__balance -= amount
         self.__history.append(f"Withdraw: {amount}")
 
@@ -32,11 +32,20 @@ account = BankAccount("Oleksandr", 0)
 
 account.deposit(150)
 account.show_balance()
-account.deposit(-5)
+try:
+    account.deposit(-5)
+except ValueError as e:
+    print(f"Error: {e}")
 account.show_balance()
-account.withdraw(500)
+try:
+    account.withdraw(500)
+except ValueError as e:
+    print(f"Error: {e}")
 account.show_balance()
-account.withdraw(100)
+try:
+    account.withdraw(100)
+except ValueError as e:
+    print(f"Error: {e}")
 account.show_balance()
 
 print("Operation history:")
